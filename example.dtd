@@ -1,0 +1,9 @@
+<!ELEMENT bookstore (book*)>
+<!ELEMENT book (title, subtitle?, author+, year, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST book category CDATA #IMPLIED>
+<!ATTLIST title lang (en | fr | de) #REQUIRED>

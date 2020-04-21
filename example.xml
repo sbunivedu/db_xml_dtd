@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE bookstore [
+<!ELEMENT bookstore (book*)>
+<!ELEMENT book (title, subtitle?, author+, year, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST book category CDATA #IMPLIED>
+<!ATTLIST title lang (en | fr | de) #REQUIRED>
+]>
+
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <author>Donald Knuth</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+
+  <book category="children">
+    <title lang="en">Harry Potter</title>
+    <subtitle>The Goblet of Fire</subtitle>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+</bookstore>
